@@ -92,8 +92,9 @@ class PhingNewRelic extends Task
         	$response = $client->restPost('/deployments.xml', $config);
         	if ($response->getStatus()!=201) {
         		$this->log( "Failed notifying deployment message to newrelic - " . $response->getMessage(), Project::MSG_ERR);
+        	} else {
+        		$this->log( "Deployment message sent to new relic" );
         	}
-        	$this->log( "Deployment message sent to new relic" );
         } catch (Exception $e) {
         	$this->log( "Failed notifying deployment message to newrelic", Project::MSG_ERR);
         
