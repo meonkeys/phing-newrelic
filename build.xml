@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="NewRelicExample" default="build">
+
+    <!-- Include Phing task -->
+    <taskdef name="newrelic" classpath="./" classname="PhingNewRelic" />
+    
+    <target name="build">
+        <newrelic apikey="YOUR_API_KEY" appid="YOUR_APP_ID" deployuser="Adar Porat" message="We just deployed a new release!" />
+    </target>
+    
+</project>

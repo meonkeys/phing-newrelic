@@ -1,0 +1,21 @@
+phing-newrelic
+=============
+
+A Phing task for sending deployment messages to newrelic.com service
+
+Requirements
+------------
+
+* [mandatory] PHP version 5.x
+* [mandatory] Zend Framework 1.11.x (uses Zend_Rest_Client)
+
+Example
+--------
+
+For a full example see `build.xml`
+
+```
+    <target name="build">
+        <newrelic apikey="YOUR_API_KEY" appid="YOUR_APP_ID" deployuser="Adar Porat" message="We just deployed a new release!" />
+    </target>
+```
