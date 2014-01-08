@@ -84,7 +84,7 @@ class PhingNewRelic extends Task
         
         try {
         	$client = new Zend_Rest_Client;
-        	$client->setUri('https://rpm.newrelic.com/deployments.xml');
+        	$client->setUri('https://api.newrelic.com/deployments.xml');
         	$httpClient = $client->getHttpClient();
         	$httpClient->setHeaders('x-api-key', $this->_apiKey);
         	$client->setHttpClient($httpClient);
